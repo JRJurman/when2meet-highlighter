@@ -9,9 +9,10 @@ const highlighter = (username, color) => {
     throw new Error(`Name ${lowerUsername} not found`)
   }
 
+  // get the id for username
   const userId = PeopleIDs[lowerPeopleNames.indexOf(lowerUsername)]
 
-  // map slots to the index, if it is the name we're looking for
+  // map slots to the index, if it contains the id we're looking for
   // then, filter out null slots
   const slotsForUserName = AvailableAtSlot
     .map( (slotIDs, slotIndex) => slotIDs.indexOf(userId) !== -1 ? slotIndex : null )
