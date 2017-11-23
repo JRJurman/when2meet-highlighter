@@ -1,6 +1,6 @@
 // just insert the function in your browser of choice, and run
 // example: highlighter("jesse", "blue")
-const highlighter = function(username, color) {
+const highlighter = (username, color) => {
 
   // verify Name is in PeopleNames
   const lowerPeopleNames = PeopleNames.map(name => name.toLowerCase())
@@ -9,10 +9,12 @@ const highlighter = function(username, color) {
     throw new Error(`Name ${lowerUsername} not found`)
   }
 
+  const userId = PeopleIDs[lowerPeopleNames.indexOf(lowerUsername)]
+
   // map slots to the index, if it is the name we're looking for
   // then, filter out null slots
-  var slotsForUserName = AvailableAtSlot
-    .map( (slotIDs, slotIndex) => slotIDs.indexOf(PeopleIDs[lowerPeopleNames.indexOf(lowerUsername)]) !== -1 ? slotIndex : null )
+  const slotsForUserName = AvailableAtSlot
+    .map( (slotIDs, slotIndex) => slotIDs.indexOf(userId) !== -1 ? slotIndex : null )
     .filter( slotIndex => slotIndex )
 
   // color each of the slots with the color
