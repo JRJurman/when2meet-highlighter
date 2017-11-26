@@ -5,4 +5,4 @@ Helpful script that highlights a single persons availability on when2meet
 Copy the script in highlighter.js and run it in your browsers console. Then you can use the highlighter function with a username and standard css background color.
 
 ## Example
-![image](https://user-images.githubusercontent.com/326557/33244430-058d5b04-d2c5-11e7-8b05-d52469827d34.png)
+![image](https://user-images.githubusercontent.com/326557/33244537-73133eee-d2c7-11e7-87cb-3573ccfd59cf.png)
