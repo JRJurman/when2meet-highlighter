@@ -1,6 +1,6 @@
 // just insert the function in your browser of choice, and run
-// example: highlighter("jesse", "blue")
-const highlighter = (username, color) => {
+// example: highlighter("jesse")
+const highlighter = (username) => {
 
   // verify Name is in PeopleNames
   const lowerPeopleNames = PeopleNames.map(name => name.toLowerCase())
@@ -20,8 +20,8 @@ const highlighter = (username, color) => {
 
   // color each of the slots with the color
   slotsForUserName.forEach( (slotIndex) => {
-    const divDOM = document.getElementById("GroupTime"+TimeOfSlot[slotIndex])
-    divDOM.style.background = color
+    const divDOM = document.getElementById(`GroupTime${TimeOfSlot[slotIndex]}`)
+    divDOM.style.filter = 'hue-rotate(90deg)'
   })
 
   // return all the times for this person
