@@ -7,4 +7,5 @@ This is extremely useful if you have a single person that has to be at a meeting
 Install the Chrome Extension. The names of all the participants should appear at the bottom. Selecting any name should tint all the times that person is available.
 
 ## Example
-![image](https://user-images.githubusercontent.com/326557/33244537-73133eee-d2c7-11e7-87cb-3573ccfd59cf.png)
+![image](https://user-images.githubusercontent.com/326557/33306330-1a3f4b86-d3e0-11e7-86df-cfccd4f1d127.png)
+
