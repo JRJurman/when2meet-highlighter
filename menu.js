@@ -64,12 +64,17 @@ PeopleNames.map((name, index) => {
   button.highlight = highlight.bind(this, name, hue)
   button.reset = resetColors.bind(this)
   button.isHighlighted = false
+  button.onreset = () => {
+    button.style.cssText = buttonStyle(false, hue)
+    button.isHighlighted = false
+  }
   button.onclick = () => {
     if (button.isHighlighted) {
       // reset cells
-      resetColors()
-      button.style.cssText = buttonStyle(false, hue)
-      button.isHighlighted = false
+      resetColors();
+      [...document.querySelectorAll('button')].forEach((button) => {
+        button.onreset()
+      })
     } else {
       // highlight cells
       highlight(name, hue)
