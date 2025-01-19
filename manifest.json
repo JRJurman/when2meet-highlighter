@@ -1,9 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
 
   "name": "when2meet-highlighter",
   "description": "Chrome Extension that allows users to visually see the indiviudal availability of people on the when2meet web app",
-  "version": "1.0.1",
+  "version": "2.0.0",
 
   "content_scripts": [
     {
@@ -13,6 +13,13 @@
   ],
 
   "web_accessible_resources": [
-    "menu.js"
+    {
+      "resources": [
+        "menu.js"
+      ],
+      "matches": [
+        "https://www.when2meet.com/*"
+      ]
+    }
   ]
 }
